@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        .container{
+            text-align: center;
+            font-size: 22px;
+        }
+        .text{
+            border: 1px solid;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <span>Name : </span>
+        <input id="source" /><br /><br />
+    
+        <span>Qualification : </span>
+        <input id="source1" />
+        <br /><br />
+    
+        <span>Hobbies : </span>
+        <input id="source2" />
+        <br /><br />
+    
+        <div class="text">
+            <span
+          >I am <span id="result"> </span>, would like to apply for an internship at
+          your organisation</span
+        ><br /><br />
+    
+        <span>My Qualification is <span id="result1"></span></span>
+    
+        <br /><br />
+    
+        <span>
+          My hobbies are <span id="result2"></span>, <span id="result2"></span> &
+          <span id="result2"></span>. (If user enters only two hobbies then it
+          should be <span id="result2"></span> & <span id="result2"></span>, if user
+          enters only one hobby it should be <span id="result2"></span>. Make sure
+          punctuations are given correctly)
+        </span>
+        </div>
+    </div>
+
+    <script>
+      const source = document.getElementById("source");
+      const result = document.getElementById("result");
+
+      const inputHandler = function (e) {
+        result.innerHTML = e.target.value;
+      };
+
+      source.addEventListener("input", inputHandler);
+      source.addEventListener("propertychange", inputHandler);
+
+      const source1 = document.getElementById("source1");
+      const result1 = document.getElementById("result1");
+
+      const inputHandler1 = function (e) {
+        result1.innerHTML = e.target.value;
+      };
+
+      source1.addEventListener("input", inputHandler1);
+      source1.addEventListener("propertychange", inputHandler1);
+
+      const source2 = document.getElementById("source2");
+      const result2 = document.getElementById("result2");
+
+      const inputHandler2 = function (e) {
+        result2.innerHTML = e.target.value;
+      };
+
+      source2.addEventListener("input", inputHandler2);
+      source2.addEventListener("propertychange", inputHandler2);
+    </script>
+  </body>
+</html>
